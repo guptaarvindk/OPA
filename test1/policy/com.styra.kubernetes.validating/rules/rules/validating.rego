@@ -7,7 +7,7 @@ enforce[decision] {
   }
 }
 
-monitor[decision] {
+enforce[decision] {
   data.library.v1.kubernetes.admission.workload.v1.deny_privilege_escalation[message]
   decision := {
     "allowed": false,
