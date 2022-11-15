@@ -27,6 +27,7 @@ enforce[decision]{
 enforce[decision]{
 not input.request.object.metadata.labels["size"] == "l"
 not input.request.object.metadata.labels["size"] == "m"
+
   parameters := {
      "cpu_limit": "1"
   }
