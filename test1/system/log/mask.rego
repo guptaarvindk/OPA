@@ -22,7 +22,7 @@ mask["/input/request/oldObject/metadata/annotations"] {
 }
 
 mask[{"op": "upsert", "path": "/labels/system-id", "value": x}] {
-    x := "{system_name: system1, system_label: label1 }"
+    x := "system1"
 }
 
 # If there is sensitive information stored in ConfigMaps, you will also want to mask the relevant info.
