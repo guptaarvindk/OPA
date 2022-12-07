@@ -21,7 +21,7 @@ mask["/input/request/oldObject/metadata/annotations"] {
   input.input.request.kind.kind == "Secret"
 }
 
-mask[{"op": "upsert", "path": "/labels/system_id", "value": x}] {
+mask[{"op": "upsert", "path": "/labels/system-id", "value": x}] {
     x := "{system_name: system1, system_label: label1 }"
 }
 
