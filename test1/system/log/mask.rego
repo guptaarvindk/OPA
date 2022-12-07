@@ -21,9 +21,9 @@ mask["/input/request/oldObject/metadata/annotations"] {
   input.input.request.kind.kind == "Secret"
 }
 
-name := input.input.name
+system_type := input.result.outcome.system_type
 mask[{"op": "upsert", "path": "/result/outcome/system_type", "value": x}] {
-    x := {"kind": input.result.outcome.system_type, "lable": "system1"}
+    x := {"kind": system_type, "lable": "system1"}
 }
 
 # If there is sensitive information stored in ConfigMaps, you will also want to mask the relevant info.
