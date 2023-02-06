@@ -34,3 +34,15 @@ not input.request.object.metadata.labels["size"] == "m"
   data.library.v1.kubernetes.mutating.v1.add_default_cpu_limit[decision]
     with data.library.parameters as parameters
 }
+
+monitor[decision] {
+  parameters := {
+    "labels_to_add": {
+      "test=arvind"
+    },
+    "labels_to_override": set()
+  }
+
+  data.library.v1.kubernetes.mutating.v1.inherit_namespace_labels[decision]
+    with data.library.parameters as parameters
+}
