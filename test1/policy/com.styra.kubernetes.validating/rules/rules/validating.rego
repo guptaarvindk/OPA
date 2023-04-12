@@ -10,7 +10,7 @@ monitor[decision] {
   }
 }
 
-monitor[decision] {
+ignore[decision] {
   parameters := {
     "prohibited_name_prefixes": {
       "system"
